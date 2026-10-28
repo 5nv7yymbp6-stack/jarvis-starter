@@ -1,0 +1,26 @@
+{
+ "description": "Gold set for the Phase 6 extraction evaluation. DEFINED BY: the Phase 5 audit (an assistant read, not yet a human review). It names where a durable personal fact is genuinely stated, by file, line pattern and logical key; it holds no values. A human should add, remove or correct entries; the harness reports recall against whatever is here.",
+ "defined_by": "assistant (Phase 5 audit); awaiting human review",
+ "positives": [
+  {"id": "g01", "key": "occupation", "path": "VAULT-INDEX.md", "why": "Who I Am: wholesales real estate"},
+  {"id": "g02", "key": "residence", "path_regex": "^01 - Daily Notes/.*/2026-09-24\\.md$", "why": "Profile Updates: home address recorded"},
+  {"id": "g03", "key": "residence", "path": "03 - Markets/Kansas City (Missouri).md", "why": "home market note names where he lives"},
+  {"id": "g04", "key": "business_start", "path_regex": "^01 - Daily Notes/.*/2026-09-14\\.md$", "why": "Profile Updates: started Feb 2026"},
+  {"id": "g05", "key": "business_start", "path": "04 - Wholesaling/04 - Wholesaling.md", "why": "started February 2026"},
+  {"id": "g06", "key": "occupation", "path_regex": "^01 - Daily Notes/.*/2026-09-14\\.md$", "why": "Profile Updates: running a wholesaling business"},
+  {"id": "g07", "key": "operating_focus", "path": "04 - Wholesaling/04 - Wholesaling.md", "why": "chosen market: Columbus"},
+  {"id": "g08", "key": "new_ventures_priority", "path": "10 - New Ventures/10 - New Ventures.md", "why": "decided: Shopify priority, AI Agency parked"},
+  {"id": "g09", "key": "pref_iraqi_arabic", "path": "VAULT-INDEX.md", "why": "language preference"},
+  {"id": "g10", "key_prefix": ["pref_", "rule_"], "path": "VAULT-INDEX.md", "min_count": 15, "why": "the 15 working-style bullets"},
+  {"id": "g11", "key_prefix": ["goal_"], "path": "VAULT-INDEX.md", "min_count": 4, "why": "the 4 What I Want bullets"}
+ ],
+ "negatives": [
+  {"id": "n01", "path": "02 - Wholesaling/Seller Leads.md", "why": "third-party names, ages, phones, addresses"},
+  {"id": "n02", "path": "07 - Personal/People.md", "why": "third-party face photos"},
+  {"id": "n03", "path": "09 - Resources/Phone Bridge.md", "why": "contains a credential-like line"},
+  {"id": "n04", "path": "02 - Wholesaling/Title Companies.md", "why": "third-party contact details"},
+  {"id": "n05", "path": "Active Priorities.md", "why": "project state, not durable personal facts"}
+ ],
+ "transcript_positives": [],
+ "transcript_positives_note": "No transcript gold yet: a human must list the facts they have actually typed or said that Jarvis should remember. Until then transcript recall is NOT measured."
+}
